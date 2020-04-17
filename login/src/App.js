@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import app from './App.css';
+
+class Login extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      value: "Name"
+    };
+
+  };
+  
+  
+  
+  
+  render(){
+    
+
+        
+
+
+
+
+
+    return( 
+    
+    <div>
+      
+      
+      
+      
+    
+      
+      <h1>Login Page :)</h1>
+      <form>
+        <label>Name:
+        <input type="text" name="name"/>
+     </label>
+     <input type="submit" value="Submit" />
+     </form>
+      </div>
+
+    );
+
+  };
 }
 
-export default App;
+export default Login;
