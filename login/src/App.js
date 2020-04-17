@@ -1,15 +1,27 @@
 import React, {Component} from 'react';
-
 import app from './App.css';
 
 class Login extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      value: "Name"
-    };
+  
 
-  };
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert(this.state.value);
+    event.preventDefault();
+  }
+
+
   
   
   
@@ -33,12 +45,13 @@ class Login extends Component{
     
       
       <h1>Login Page :)</h1>
-      <form>
-        <label>Name:
-        <input type="text" name="name"/>
-     </label>
-     <input type="submit" value="Submit" />
-     </form>
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
       </div>
 
     );
