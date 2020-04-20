@@ -1,35 +1,16 @@
 import React,{Component} from 'react';
-import app from './App.css';
-import {Router, Route ,Switch} from "react-router-dom";
-import Login from './enter';
+import UserForm from './Components/UserForm.js';
 
 
 
 
+export class App extends Component {
+  render() {
+    return (
+        <UserForm/>
 
-
-class Main extends Component{
-  render(){
-    return(
-      <Login />
-      
-      
-
-
-    );
+    )
   }
-
-
-
-
 }
 
-const Home = () => (
-  <div>
-    <h1>Home Page</h1>
-  </div>
-);
-
-
-
-export default Main;
+export default App
